@@ -39,6 +39,8 @@ const ProductsContext = createContext<ProductsContextProps>(
 export const Products: React.FC = ({children}) => {
   const [productList, setProductList] = useState<Product[]>([]);
 
+  const [order, setOrder] = useState<number>();
+
   async function createProduct(item: NewProductProps) {
     await create(item);
 
@@ -105,6 +107,23 @@ export const Products: React.FC = ({children}) => {
       setProductList(findProducts);
     } else {
       setProductList(products);
+
+      switch (order) {
+        case 0:
+          idSort();
+          break;
+        case 1:
+          nameSort();
+          break;
+        case 2:
+          priceSort();
+          break;
+        case 3:
+          stockSort();
+          break;
+      }
+
+      setProductList([...productList]);
     }
   }
 
@@ -114,6 +133,8 @@ export const Products: React.FC = ({children}) => {
     });
 
     setProductList([...productList]);
+
+    setOrder(0);
   }
 
   function nameSort() {
@@ -130,6 +151,8 @@ export const Products: React.FC = ({children}) => {
     });
 
     setProductList([...productList]);
+
+    setOrder(1);
   }
 
   function priceSort() {
@@ -138,6 +161,8 @@ export const Products: React.FC = ({children}) => {
     });
 
     setProductList([...productList]);
+
+    setOrder(2);
   }
 
   function stockSort() {
@@ -146,6 +171,8 @@ export const Products: React.FC = ({children}) => {
     });
 
     setProductList([...productList]);
+
+    setOrder(3);
   }
 
   useEffect(() => {
