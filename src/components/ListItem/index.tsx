@@ -24,7 +24,7 @@ import {
 interface ProductProps {
   product: {
     id: number;
-    data: null | {
+    data: {
       name: string;
       stock: number;
       price: number;
@@ -43,7 +43,7 @@ const ListItem: React.FC<ProductProps> = ({product}) => {
       <ListItemHeader>
         <ListItemInfoContaier>
           <ListItemName>{product.data!.name}</ListItemName>
-          <ListItemPrice>{formatPrice(product.data!.price)}</ListItemPrice>
+          <ListItemPrice>{formatPrice(product.data.price)}</ListItemPrice>
           <ListItemStock>{product.data!.stock} unidades</ListItemStock>
           <ListItemId>ID: {product.id}</ListItemId>
         </ListItemInfoContaier>
