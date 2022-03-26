@@ -99,7 +99,7 @@ export const Products: React.FC = ({children}) => {
   async function searchProduct(input: string) {
     const products = await index();
 
-    if (input !== '') {
+    if (input !== ' ') {
       const findProducts = products.filter((item: Product) =>
         item.data.name.toLowerCase().includes(input.toLowerCase()),
       );
