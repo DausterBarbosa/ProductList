@@ -9,6 +9,7 @@
   <li>React Native</li>
   <li>Typescript</li>
   <li>Styled-Components</li>
+  <li>Gerência de estado com ContextAPI</li>
 </ul>
 
 ## Funcionalidades
