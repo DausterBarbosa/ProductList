@@ -33,10 +33,14 @@
 
 `cd ProductList`
 
-3 - Instale o projeto
+3 - Instale as dependências
+
+`$ yarn`
+
+4 - Instale o projeto
 
 `$ npx react-native run-android`
 
-4 - Inicialize o projeto
+5 - Inicialize o projeto
 
 `$ npx react-native start`
