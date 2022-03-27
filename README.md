@@ -31,7 +31,7 @@
 
 2 - Entre no diretório do projeto
 
-`cd ProductList`
+`$ cd ProductList`
 
 3 - Instale as dependências
 
