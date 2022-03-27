@@ -29,10 +29,14 @@
 
 `$ git clone https://github.com/DausterBarbosa/ProductList.git`
 
-2 - Instale o projeto
+2 - Entre no diretório do projeto
+
+`cd ProductList`
+
+3 - Instale o projeto
 
 `$ npx react-native run-android`
 
-3 - Inicialize o projeto
+4 - Inicialize o projeto
 
 `$ npx react-native start`
